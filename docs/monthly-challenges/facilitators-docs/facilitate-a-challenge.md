@@ -122,7 +122,6 @@ Some challenges require daily check-in. You can automate it using the Slack bot.
 
 - Provide feedback in the `#vc-monthly-challenge-team` channel, like what went well and what could've gone better for the challenge. Let us know what support you need and what things you think would be nice to do next time.
 - Update the README file in the challenge's folder with:
-
   - new script templates and things we did for the challenge,
   - the month and year of the challenge,
   - the blog post(s) for the challenge, if any.

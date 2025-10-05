@@ -16,7 +16,7 @@ const config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
-// Set theme for mermaid diagrams here 
+  // Set theme for mermaid diagrams here
   themes: ['@docusaurus/theme-mermaid'],
   markdown: {
     mermaid: true,

@@ -95,7 +95,7 @@ graph TD
   E --> G[LC sends confirmation email to Speaker]
   G --> H[LC adds event to Google Calendar]
   H --> I[DW updates issue and assigns Moderator]
-  ```
+```
 
 1. The LC checks the calendar for availability in order of the Speaker's preferred dates.
 

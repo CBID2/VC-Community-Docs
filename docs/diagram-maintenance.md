@@ -3,16 +3,17 @@ id: diagram-maintenance
 title: 'Maintaining and Updating Diagrams'
 sidebar_label: 'Maintaining and Updating Diagrams'
 keywords:
-- 'diagram'
-- 'mermaid'
-- 'process flowchart'
-- 'process diagram'
-- 'process flow'
-- 'process workflow'
-- 'workflow diagram'
-- 'workflow flowchart'
-- 'workflow flow'
+  - 'diagram'
+  - 'mermaid'
+  - 'process flowchart'
+  - 'process diagram'
+  - 'process flow'
+  - 'process workflow'
+  - 'workflow diagram'
+  - 'workflow flowchart'
+  - 'workflow flow'
 ---
+
 # Maintaining and Updating Diagrams
 
 ## Overview
@@ -34,11 +35,12 @@ Update diagrams when:
 
 Find the Mermaid code block in the documentation file. It will look like this:
 
-```markdown
+````markdown
 ```mermaid
 graph TD
     A[Start] --> B[Step 1]
 ```
+````
 
 ### 2. Edit the Diagram
 

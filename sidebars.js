@@ -11,6 +11,10 @@ const sidebars = {
         'community-roles/team-leads-and-coordinators',
       ],
     },
+    {
+      type: 'doc',
+      id: 'diagram-maintenance',
+    },
     // -------- COFFEE TABLE GROUPS --------
     {
       type: 'category',

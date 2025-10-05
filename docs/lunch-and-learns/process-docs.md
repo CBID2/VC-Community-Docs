@@ -85,6 +85,18 @@ Includes Editors and Graphics Coordinator (GC) who handle post-event cleanup of 
 
 #### Scheduling Workflow
 
+```mermaid
+graph TD
+  A[Speaker submits request form] --> B[LC & DW receive form]
+  B --> C[LC checks calendar for available dates]
+  C --> D{Dates available?}
+  D -->|Yes| E[Confirm Host and Moderator availability]
+  D -->|No| F[LC requests new time slots from Speaker]
+  E --> G[LC sends confirmation email to Speaker]
+  G --> H[LC adds event to Google Calendar]
+  H --> I[DW updates issue and assigns Moderator]
+  ```
+
 1. The LC checks the calendar for availability in order of the Speaker's preferred dates.
 
    a. If any of the Speaker's suggested time slots are available, continue to step 2.

@@ -39,6 +39,23 @@ If you have ideas for a new challenge(s), you can propose and discuss them in th
 
 ## Before the Challenge
 
+```mermaid
+flowchart TD
+  A[Challenge Planning Begins] --> B[Share Availability in #vc-monthly-challenge-team]
+  B --> C[Propose or Discuss New Challenge Ideas]
+  C --> D[Coordinate with Coffee Table Group Hosts]
+  D --> E[Write Blog Post on DEV]
+  E --> F[Submit Blog Post for Proofreading]
+  F --> G[Update Challenge Pages on Website]
+  G --> H[First Day of Month: Update #monthly-challenge Channel]
+  H --> I[Announce New Challenge in #announcements]
+  I --> J[During Challenge: Monday Goals Check-In]
+  J --> K[Weekly Async Check-Ins in Slack]
+  K --> L[Automate Check-Ins with Slack Bot (If Needed)]
+  L --> M[Post-Challenge: Share Feedback in #vc-monthly-challenge-team]
+  M --> N[Update Challenge README with Scripts, Notes, and Blog Links]
+```
+
 ### Coordinating with the Coffee Table Groups
 
 We love collaboration! We're happy to involve our [Coffee Table Groups](https://virtualcoffee.io/resources/virtual-coffee-handbook/guides-to-virtual-coffee/coffee-table-groups) in our challenges whenever possible. Besides giving more support to our community, our goal is that the community becomes more familiar with the Coffee Table Groups and can encourage them to attend the groups more and, ultimately, give them support through volunteering.

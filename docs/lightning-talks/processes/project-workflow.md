@@ -1,5 +1,5 @@
 ---
-id: project-workflow
+id: lightning-talks-project-workflow
 title: 'Lightning Talk Project Workflow'
 sidebar_label: 'Facilitator Guidelines'
 keywords:

@@ -52,7 +52,7 @@ const config = {
       }),
     ],
   ],
-// These lines enable Mermaid support ✅
+  // These lines enable Mermaid support ✅
   markdown: {
     mermaid: true,
   },

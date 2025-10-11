@@ -16,11 +16,7 @@ const config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
-  // These lines enable Mermaid support ✅
-  markdown: {
-    mermaid: true,
-  },
-  themes: ['@docusaurus/theme-mermaid'],
+
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Virtual-Coffee', // Usually your GitHub org/user name.
@@ -56,7 +52,11 @@ const config = {
       }),
     ],
   ],
-
+// These lines enable Mermaid support ✅
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
   themeConfig: {
     // Replace with your project's social card
     image: 'img/vc-social-card.png',

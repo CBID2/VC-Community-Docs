@@ -37,6 +37,25 @@ Let us know your availability for the challenge in the reminder thread that drop
 
 If you have ideas for a new challenge(s), you can propose and discuss them in the `#vc-monthly-challenge-team` channel on Slack or open a new [discussion on GitHub](https://github.com/Virtual-Coffee/VC-Community-Docs/discussions).
 
+Below is the entire lifecycle of a Virtual Coffee Monthly Challenge session.
+
+```mermaid
+flowchart TD
+  A[Challenge Planning Begins] --> B[Share Availability in #vc-monthly-challenge-team]
+  B --> C[Propose or Discuss New Challenge Ideas]
+  C --> D[Coordinate with Coffee Table Group Hosts]
+  D --> E[Write Blog Post on DEV]
+  E --> F[Submit Blog Post for Proofreading]
+  F --> G[Update Challenge Pages on Website]
+  G --> H[First Day of Month: Update #monthly-challenge Channel]
+  H --> I[Announce New Challenge in #announcements]
+  I --> J[During Challenge: Monday Goals Check-In]
+  J --> K[Weekly Async Check-Ins in Slack]
+  K --> L[Automate Check-Ins with Slack Bot]
+  L --> M[Post-Challenge: Share Feedback in #vc-monthly-challenge-team]
+  M --> N[Update Challenge README with Scripts, Notes, and Blog Links]
+```
+
 ## Before the Challenge
 
 ### Coordinating with the Coffee Table Groups

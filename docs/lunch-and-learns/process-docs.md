@@ -31,7 +31,7 @@ tags:
   - 'lunch and learns'
 ---
 
-Below is the entire lifecycle of a Virtual Coffee Lunch & Learn session.
+
 
 ## Roles
 

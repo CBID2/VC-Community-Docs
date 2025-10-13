@@ -35,6 +35,23 @@ tags:
 
 The function of the Lightning Talks Event is to allow opportunities for members of the community to have an intimate space to present on a tech topic for 5-15 minutes. When live-streaming as a members-only event, speakers can feel more comfortable as it's _their_ community listening and watching. However, their is still opportunity to impact a larger audience once the videos have been processed and put up on YouTube.
 
+```mermaid
+flowchart TD
+  A["Call for Coordinators, Mentors, and Teammates"] --> B["Clarify Roles and Onboard Team"]
+  B --> C["Team Meeting and Assign Coordinators"]
+  C --> D["Call for Proposals (CFP) Opens"]
+  D --> E["Collect Speaker Proposals via GitHub Form"]
+  E --> F["CFP Closes - Team Lead Creates Groups"]
+  F --> G["Organize Talks"]
+  G --> H["Create Coordinator Issue Cards & Checklists"]
+  H --> I["Collect Speaker Info (Bio, Headshot, Slides)"]
+  I --> J["Centralize All Information in Shared Folder"]
+  J --> K["Coordinators Update Checklists"]
+  K --> L["Week of Event - Send Directions to Speakers"]
+  L --> M["Speakers Deliver Lightning Talks"]
+  M --> N["Videos Processed & Uploaded to YouTube"]
+```
+
 ### Specifics
 
 - 5-15 minutes on one topic

@@ -31,8 +31,6 @@ tags:
   - 'lunch and learns'
 ---
 
-
-
 ## Roles
 
 There are several moving parts to making a successful Lunch & Learn. These docs are organized as to not assume one person is doing multiple roles (they could but they don't have to). It will also make it easy to assign roles as needed as our volunteer groups expand and contract.

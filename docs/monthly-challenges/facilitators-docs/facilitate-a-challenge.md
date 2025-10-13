@@ -40,20 +40,52 @@ If you have ideas for a new challenge(s), you can propose and discuss them in th
 Below is the entire lifecycle of a Virtual Coffee Monthly Challenge session.
 
 ```mermaid
-flowchart TD
-  A[Challenge Planning Begins] --> B[Share Availability in #vc-monthly-challenge-team]
-  B --> C[Propose or Discuss New Challenge Ideas]
-  C --> D[Coordinate with Coffee Table Group Hosts]
-  D --> E[Write Blog Post on DEV]
-  E --> F[Submit Blog Post for Proofreading]
-  F --> G[Update Challenge Pages on Website]
-  G --> H[First Day of Month: Update #monthly-challenge Channel]
-  H --> I[Announce New Challenge in #announcements]
-  I --> J[During Challenge: Monday Goals Check-In]
-  J --> K[Weekly Async Check-Ins in Slack]
-  K --> L[Automate Check-Ins with Slack Bot]
-  L --> M[Post-Challenge: Share Feedback in #vc-monthly-challenge-team]
-  M --> N[Update Challenge README with Scripts, Notes, and Blog Links]
+flowchart LR
+  %% Planning
+  subgraph A[🛠 Planning]
+    A1[📢 Challenge Planning Begins] --> A2[👥 Share Availability]
+    A2 --> A3[📝 Propose/Discuss Ideas]
+  end
+
+  %% Coordination
+  subgraph B[🤝 Coordination]
+    B1[🤝 Coordinate with Coffee Table Hosts]
+  end
+
+  %% Blog
+  subgraph C[📝 Blog]
+    C1[📝 Write Blog Post] --> C2[🔍 Proofreading]
+  end
+
+  %% Website
+  subgraph D[🌐 Website]
+    D1[🌐 Update Challenge Pages]
+  end
+
+  %% Announcement
+  subgraph E[📢 Announcement]
+    E1[📢 Update Channel] --> E2[📢 Announce Challenge]
+  end
+
+  %% Check-Ins
+  subgraph F[✅ Check-Ins]
+    F1[📅 Monday Goals] --> F2[💬 Weekly Async]
+    F2 --> F3[🤖 Automate with Slack Bot]
+  end
+
+  %% Post-Challenge
+  subgraph G[🎉 Post-Challenge]
+    G1[💬 Share Feedback] --> G2[📝 Update README]
+  end
+
+  %% Flow
+  A3 --> B1
+  B1 --> C1
+  C2 --> D1
+  D1 --> E1
+  E2 --> F1
+  F3 --> G1
+  G2
 ```
 
 ## Before the Challenge

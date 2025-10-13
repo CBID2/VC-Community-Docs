@@ -36,20 +36,42 @@ tags:
 The function of the Lightning Talks Event is to allow opportunities for members of the community to have an intimate space to present on a tech topic for 5-15 minutes. When live-streaming as a members-only event, speakers can feel more comfortable as it's _their_ community listening and watching. However, their is still opportunity to impact a larger audience once the videos have been processed and put up on YouTube.
 
 ```mermaid
-flowchart TD
-  A["Call for Coordinators, Mentors, and Teammates"] --> B["Clarify Roles and Onboard Team"]
-  B --> C["Team Meeting and Assign Coordinators"]
-  C --> D["Call for Proposals (CFP) Opens"]
-  D --> E["Collect Speaker Proposals via GitHub Form"]
-  E --> F["CFP Closes - Team Lead Creates Groups"]
-  F --> G["Organize Talks"]
-  G --> H["Create Coordinator Issue Cards & Checklists"]
-  H --> I["Collect Speaker Info (Bio, Headshot, Slides)"]
-  I --> J["Centralize All Information in Shared Folder"]
-  J --> K["Coordinators Update Checklists"]
-  K --> L["Week of Event - Send Directions to Speakers"]
-  L --> M["Speakers Deliver Lightning Talks"]
-  M --> N["Videos Processed & Uploaded to YouTube"]
+flowchart LR
+  %% Planning
+  subgraph A[🛠 Planning]
+    A1[📢 Call for Team] --> A2[👥 Onboard Team]
+    A2 --> A3[📝 Assign Coordinators]
+  end
+
+  %% CFP
+  subgraph B[📬 CFP]
+    B1[📣 CFP Opens] --> B2[🧾 Collect Proposals]
+    B2 --> B3[👩‍💻 Grouping]
+  end
+
+  %% Speaker Prep
+  subgraph C[🧭 Prep]
+    C1[🗂 Organize Talks] --> C2[✅ Checklists]
+    C2 --> C3[📸 Speaker Info]
+    C3 --> C4[📁 Shared Folder]
+  end
+
+  %% Event
+  subgraph D[🎤 Event]
+    D1[🧾 Final Prep] --> D2[📨 Directions]
+    D2 --> D3[🧑‍🏫 Talks]
+  end
+
+  %% Post
+  subgraph E[🎥 Post-Event]
+    E1[☁️ Upload to YouTube]
+  end
+
+  %% Flow
+  A3 --> B1
+  B3 --> C1
+  C4 --> D1
+  D3 --> E1
 ```
 
 ### Specifics

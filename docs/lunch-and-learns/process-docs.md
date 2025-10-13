@@ -84,15 +84,28 @@ Includes Editors and Graphics Coordinator (GC) who handle post-event cleanup of 
 #### Scheduling Workflow
 
 ```mermaid
-graph TD
-  A[Speaker submits request form] --> B[LC & DW receive form]
-  B --> C[LC checks calendar for available dates]
-  C --> D{Dates available?}
-  D -->|Yes| E[Confirm Host and Moderator availability]
-  D -->|No| F[LC requests new time slots from Speaker]
-  E --> G[LC sends confirmation email to Speaker]
-  G --> H[LC adds event to Google Calendar]
-  H --> I[DW updates issue and assigns Moderator]
+flowchart LR
+  %% Request & Planning
+  subgraph A[📝 Request & Planning]
+    A1[📝 Speaker submits request] --> A2[📥 LC & DW receive form]
+    A2 --> A3[📅 LC checks calendar]
+  end
+
+  %% Scheduling
+  subgraph B[📆 Scheduling]
+    B1{📅 Dates available?}
+    B1 -->|Yes| B2[✅ Confirm Host/Moderator]
+    B1 -->|No| B3[🔄 Request new slots]
+    B2 --> B4[📧 Confirmation email]
+    B4 --> B5[📅 Add to Calendar]
+    B5 --> B6[🗂 DW updates issue]
+  end
+
+  %% Flow
+  A3 --> B1
+  B2 --> B4
+  B3 --> A3
+  B6
 ```
 
 1. The LC checks the calendar for availability in order of the Speaker's preferred dates.

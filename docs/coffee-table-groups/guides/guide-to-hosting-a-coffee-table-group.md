@@ -71,23 +71,23 @@ You may enter the Zoom up to 10 minutes before the start of the event. Do so by 
 
 ### Claiming Host and Assigning Co-host
 
-When you arrive in the Zoom, enter the Host Code to claim Host privledges. To do this, navigate to the `#vc-events-admin` channel in Slack and copy the Host Code from the posted Coffee Table group event.
+When you arrive in the Zoom, enter the Host Code to claim Host privileges. To do this, navigate to the `#vc-events-admin` channel in Slack and copy the Host Code from the posted Coffee Table group event.
 
-![Post to the `#vc-events-admin` channel in Slack](../../_assets/images/host-code.png)
+![Post to the `#vc-events-admin` channel in Slack showing an event's name, time and date, location of the event, a host code, and a channel to post the announcement](../../_assets/images/host-code.png)
 
 Back in Zoom, open the Participants tab and click on the 'Claim host' button to input the code.
 
-![A Zoom meeting with no Host](../../_assets/images/hostless-zoom.png)
+![A state of Zoom meeting with no Host. The 'Participants' tab shows options: 'Invite', 'Unmute me', and 'Claim host'](../../_assets/images/hostless-zoom.png)
 
-![Zoom's 'Claim host' modal](../../_assets/images/claim-host.png)
+![Zoom's 'Claim host' modal with input says 'Enter host key'](../../_assets/images/claim-host.png)
 
-Once your Co-host enters the Zoom, hover over their name in the Participants tab and click the 'More ▿' button. Select the 'Make co-host' option to grant them Co-host privledges.
+Once your Co-host enters the Zoom, hover over their name in the Participants tab and click the 'More ▿' button. Select the 'Make co-host' option to grant them Co-host privileges.
 
-![Meg & Joe making faces for your enjoyment](../../_assets/images/assign-co-host.png)
+![The 'More' button dropdown with 'Make co-host option on Zoom'](../../_assets/images/assign-co-host.png)
 
 :::warning
 
-As Zoom Host, if you leave the Zoom, you will end the call for all participants! If you have to leave early, be sure to pass Host privledges to your Co-host by following the steps above and selecting 'Make host' before exiting the Zoom call.
+As Zoom Host, if you leave the Zoom, you will end the call for all participants! If you have to leave early, be sure to pass Host privileges to your Co-host by following the steps above and selecting 'Make host' before exiting the Zoom call.
 
 :::
 
@@ -104,7 +104,7 @@ Then, select the number of breakout rooms you want to create.
 
 Don't forget to click on 'Open all rooms' when you're finished creating them!
 
-![Zoom's Breakout room modal](../../_assets/images/breakout-room-options.png)
+![Zoom's breakout room settings modal shows selected options for 'Allow participants to choose room', 'Allow participants to return to the main session at any time', 'Countdown after closing breakout rooms', and an 'Open all rooms' button.](../../_assets/images/breakout-room-options.png)
 
 ### Ending a Meeting
 
@@ -112,7 +112,7 @@ Once your Coffee Table event has finished, click the 'End' button. This will tri
 
 ![Zoom's 'End' button](../../_assets/images/end-button.png)
 
-![Zoom's options for ending a meeting](../../_assets/images/end-options.png)
+![Zoom's dialog box showing two options: 'End meeting for all' and 'Leave meeting'](../../_assets/images/end-options.png)
 
 :::warning[Caution]
 
@@ -138,7 +138,7 @@ All Virtual Coffee events have automated messages attached to them:
   - In addition, this message is always posted to `#vc-events-admin`. The content of this message includes the event name, time, location (Zoom URL), host code, and in which Slack channel the join link is posted. It also displays a 'Join Event' button for the Coffee Table Hosts and Leader to use.
   - The 'Join Event' buttons in both messages are identical, so a Coffee Table Host or Leader can use either one.
 
-![Post to the `#vc-events` channel in Slack](../../_assets/images/starting-soon-post.png)
+![A post on the `#vc-events` channel in Slack announcing an event that is starting soon](../../_assets/images/starting-soon-post.png)
 
 ## Important Contacts
 

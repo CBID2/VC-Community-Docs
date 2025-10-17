@@ -37,12 +37,12 @@ Monthly Challenge team communication and facilitation mostly takes place in Slac
 
 1. Click the down arrow next to the channel's name.
 
-   ![Get channel details](../../_assets/images/get-channel-details.png)
+   ![An open Slack channel with a dropdown menu next to the name to get channel details](../../_assets/images/get-channel-details.png)
 
 2. Click the "Edit" button in the topic section. Fill it in with the name of the challenge and the link to the challenge page on the website.
 3. Click the "Edit" button in the description section. Fill it in with a brief description of the challenge.
 
-   ![Edit channel's topic and description](../../_assets/images/edit-channel-topic-and-description.png)
+   ![Topic and Description sections under the channel name's About Tab](../../_assets/images/edit-channel-topic-and-description.png)
 
 ## Setting Up a Slack Bot
 
@@ -60,12 +60,12 @@ Sometimes, you want to write a customized thread directly from your account, suc
 2. Write your message.
 3. Click the down arrow next to the green "Send" icon.
 
-   ![Slack schedule for later](../../_assets/images/slack-schedule-for-later.png)
+   ![The dropdown menu 'Schedule for later' in a message input on Slack](../../_assets/images/slack-schedule-for-later.png)
 
 4. Select the "Custom time".
 5. Set the day and time. This day and time default to your timezone.
 
-   ![Slack schedule message](../../_assets/images/slack-schedule-message.png)
+   !['Schedule message' options in a message input on Slack to set the day and time of publishing. The available options are 'Later today at 13:00', 'Monday at 09:00', and 'Custom time'](../../_assets/images/slack-schedule-message.png)
 
 ## Updating the Monthly Challenge Pages on the Website
 

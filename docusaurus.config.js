@@ -72,7 +72,8 @@ const config = {
       options: {
         themeVariables: {
           fontSize: '20px',
-          fontFamily: "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji'",
+          fontFamily:
+            "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji'",
           lineColor: '#6B7280',
           primaryColor: '#FFF7D6',
           primaryTextColor: '#1F2937',

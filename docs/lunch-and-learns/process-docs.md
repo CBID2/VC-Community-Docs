@@ -83,29 +83,24 @@ Includes Editors and Graphics Coordinator (GC) who handle post-event cleanup of 
 
 #### Scheduling Workflow
 
+The following diagram shows the workflow for scheduling a Lunch & Learn.
+
 ```mermaid
-flowchart LR
-  %% Request & Planning
-  subgraph A[📝 Request & Planning]
-    A1[📝 Speaker submits request] --> A2[📥 LC & DW receive form]
-    A2 --> A3[📅 LC checks calendar]
-  end
-
-  %% Scheduling
-  subgraph B[📆 Scheduling]
-    B1{📅 Dates available?}
-    B1 -->|Yes| B2[✅ Confirm Host/Moderator]
-    B1 -->|No| B3[🔄 Request new slots]
-    B2 --> B4[📧 Confirmation email]
-    B4 --> B5[📅 Add to Calendar]
-    B5 --> B6[🗂 DW updates issue]
-  end
-
-  %% Flow
-  A3 --> B1
-  B2 --> B4
-  B3 --> A3
-  B6
+%%{init: { "themeVariables": { "fontSize": "18px" }, "flowchart": { "nodeSpacing": 40, "rankSpacing": 60, "padding": 8, "htmlLabels": true } } }%%
+flowchart TB
+  A1[📝 Submit Request] --> A2[📥 Receive Form]
+  A2 --> A3[📅 Check Calendar]
+  A3 --> B1{📅 Dates?}
+  B1 -- Yes --> B2[✅ Confirm Host]
+  B2 --> B3[📧 Confirm Email]
+  B3 --> B4[📅 Add to Cal]
+  B4 --> B5[🗂 Update Issue]
+  B1 -- No --> C1[🔄 Request New Slots]
+  C1 --> C2[📬 Receive Options]
+  C2 --> D1{✅ Options OK?}
+  D1 -- Yes --> A3
+  D1 -- No --> C3[🕒 Set New Deadline]
+  C3 --> C1
 ```
 
 1. The LC checks the calendar for availability in order of the Speaker's preferred dates.

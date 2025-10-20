@@ -29,3 +29,58 @@
   --ifm-footer-background-color: #3a3c3d;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Mermaid sizing helpers */
+.mermaid,
+.theme-mermaid {
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.mermaid > svg,
+.theme-mermaid svg {
+  /* Responsive by default for consistent sizing */
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 1200px) {
+  .mermaid > svg,
+  .theme-mermaid svg {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .mermaid > svg,
+  .theme-mermaid svg {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Extra-wide wrapper for selected diagrams */
+.mermaid--xxl svg {
+  width: 3000px !important;
+  max-width: none !important;
+}
+
+/* Center the extra-wide diagrams while allowing horizontal scroll */
+.mermaid--xxl {
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+}
+
+.mermaid--xxl svg {
+  margin: 0 auto;
+  display: block;
+}
+
+@media (max-width: 1200px) {
+  .mermaid--xxl svg {
+    width: 1400px !important;
+  }
+}

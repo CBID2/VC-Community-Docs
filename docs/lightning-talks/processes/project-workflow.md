@@ -35,43 +35,57 @@ tags:
 
 The function of the Lightning Talks Event is to allow opportunities for members of the community to have an intimate space to present on a tech topic for 5-15 minutes. When live-streaming as a members-only event, speakers can feel more comfortable as it's _their_ community listening and watching. However, their is still opportunity to impact a larger audience once the videos have been processed and put up on YouTube.
 
+Below is the workflow for the Lightning Talks Event.
+
+#### Planning
+
 ```mermaid
-flowchart LR
-  %% Planning
-  subgraph A[🛠 Planning]
-    A1[📢 Call for Team] --> A2[👥 Onboard Team]
-    A2 --> A3[📝 Assign Coordinators]
-  end
+%%{init: { "themeVariables": { "fontSize": "20px" }, "flowchart": { "nodeSpacing": 50, "rankSpacing": 60, "padding": 4 } } }%%
+flowchart TB
+  A1[📢 Call for Team] --> A2[👥 Onboard Team]
+  A2 --> A3[📝 Assign Coordinators]
+```
 
-  %% CFP
-  subgraph B[📬 CFP]
-    B1[📣 CFP Opens] --> B2[🧾 Collect Proposals]
-    B2 --> B3[👩‍💻 Grouping]
-  end
+#### CFP
 
-  %% Speaker Prep
-  subgraph C[🧭 Prep]
-    C1[🗂 Organize Talks] --> C2[✅ Checklists]
-    C2 --> C3[📸 Speaker Info]
-    C3 --> C4[📁 Shared Folder]
-  end
+```mermaid
+%%{init: { "themeVariables": { "fontSize": "20px" }, "flowchart": { "nodeSpacing": 50, "rankSpacing": 60, "padding": 4 } } }%%
+flowchart TB
+  B1[📣 CFP Opens] --> B2[🧾 Collect Proposals]
+  B2 --> B0{Enough?}
+  B0 -- Yes --> B3[👩‍💻 Grouping]
+  B0 -- No --> B4[📣 Extend CFP]
+  B4 --> B2
+```
 
-  %% Event
-  subgraph D[🎤 Event]
-    D1[🧾 Final Prep] --> D2[📨 Directions]
-    D2 --> D3[🧑‍🏫 Talks]
-  end
+#### Speaker Prep
 
-  %% Post
-  subgraph E[🎥 Post-Event]
-    E1[☁️ Upload to YouTube]
-  end
+```mermaid
+%%{init: { "themeVariables": { "fontSize": "20px" }, "flowchart": { "nodeSpacing": 50, "rankSpacing": 70, "padding": 10 } } }%%
+flowchart TB
+  C1[🗂 Organize Talks] --> C2[✅ Checklists]
+  C2 --> C0{Missing?}
+  C0 -- Yes --> C5[📬 Request Info]
+  C5 --> C2
+  C0 -- No --> C3[📸 Speaker Info]
+  C3 --> C4[📁 Shared Folder]
+```
 
-  %% Flow
-  A3 --> B1
-  B3 --> C1
-  C4 --> D1
-  D3 --> E1
+#### Event
+
+```mermaid
+%%{init: { "themeVariables": { "fontSize": "20px" }, "flowchart": { "nodeSpacing": 50, "rankSpacing": 70, "padding": 10 } } }%%
+flowchart TB
+  D1[🧾 Final Prep] --> D2[📨 Directions]
+  D2 --> D3[🧑‍🏫 Talks]
+```
+
+#### Post-Event
+
+```mermaid
+%%{init: { "themeVariables": { "fontSize": "20px" }, "flowchart": { "nodeSpacing": 50, "rankSpacing": 70, "padding": 10 } } }%%
+flowchart TB
+  E1[☁️ Upload to YouTube]
 ```
 
 ### Specifics

@@ -37,55 +37,50 @@ Let us know your availability for the challenge in the reminder thread that drop
 
 If you have ideas for a new challenge(s), you can propose and discuss them in the `#vc-monthly-challenge-team` channel on Slack or open a new [discussion on GitHub](https://github.com/Virtual-Coffee/VC-Community-Docs/discussions).
 
-Below is the entire lifecycle of a Virtual Coffee Monthly Challenge session.
+Below is a diagram the Monthly Challenge workflow.
+
+#### Planning + Coordination
 
 ```mermaid
-flowchart LR
-  %% Planning
-  subgraph A[🛠 Planning]
-    A1[📢 Challenge Planning Begins] --> A2[👥 Share Availability]
-    A2 --> A3[📝 Propose/Discuss Ideas]
-  end
+%%{init: { "themeVariables": { "fontSize": "20px" }, "flowchart": { "nodeSpacing": 50, "rankSpacing": 70, "padding": 10 } } }%%
+flowchart TB
+  A1[📢 Planning] --> A2[👥 Share Time]
+  A2 --> A3[📝 Propose]
+  A3 --> B1[🤝 Plan w/ Hosts]
+```
 
-  %% Coordination
-  subgraph B[🤝 Coordination]
-    B1[🤝 Coordinate with Coffee Table Hosts]
-  end
+#### Blog + Website
 
-  %% Blog
-  subgraph C[📝 Blog]
-    C1[📝 Write Blog Post] --> C2[🔍 Proofreading]
-  end
+```mermaid
+%%{init: { "themeVariables": { "fontSize": "20px" }, "flowchart": { "nodeSpacing": 50, "rankSpacing": 70, "padding": 10 } } }%%
+flowchart TB
+  C1[📝 Write Blog] --> C2[🔍 Proofread]
+  C2 --> D0{✅ OK?}
+  D0 -- Yes --> D1[🌐 Update Pages]
+  D0 -- No --> D2[✏️ Revise]
+  D2 --> C2
+```
 
-  %% Website
-  subgraph D[🌐 Website]
-    D1[🌐 Update Challenge Pages]
-  end
+#### Announcement
 
-  %% Announcement
-  subgraph E[📢 Announcement]
-    E1[📢 Update Channel] --> E2[📢 Announce Challenge]
-  end
+```mermaid
+%%{init: { "themeVariables": { "fontSize": "20px" }, "flowchart": { "nodeSpacing": 50, "rankSpacing": 70, "padding": 10 } } }%%
+flowchart TB
+  E1[📢 Update] --> E2[📢 Announce]
+```
 
-  %% Check-Ins
-  subgraph F[✅ Check-Ins]
-    F1[📅 Monday Goals] --> F2[💬 Weekly Async]
-    F2 --> F3[🤖 Automate with Slack Bot]
-  end
+#### Check-Ins + Post-Challenge
 
-  %% Post-Challenge
-  subgraph G[🎉 Post-Challenge]
-    G1[💬 Share Feedback] --> G2[📝 Update README]
-  end
-
-  %% Flow
-  A3 --> B1
-  B1 --> C1
-  C2 --> D1
-  D1 --> E1
-  E2 --> F1
-  F3 --> G1
-  G2
+```mermaid
+%%{init: { "themeVariables": { "fontSize": "20px" }, "flowchart": { "nodeSpacing": 50, "rankSpacing": 70, "padding": 10 } } }%%
+flowchart TB
+  F1[📅 Goals] --> F2[💬 Weekly]
+  F2 --> F3[🤖 Automate]
+  F3 --> G1[💬 Feedback]
+  G1 --> G0{More updates?}
+  G0 -- Yes --> G2[📝 Update Docs]
+  G2 --> G1
+  G0 -- No --> H1[🏁]
 ```
 
 ## Before the Challenge

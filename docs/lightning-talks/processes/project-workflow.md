@@ -51,7 +51,7 @@ flowchart LR
     A4["📋 Review<br/>Responsibilities"]
     A1 --> A2 --> A3 --> A4
   end
-  
+
   %% Right Column - Initial Planning
   subgraph B["📋 Initial Planning"]
     direction TB
@@ -60,9 +60,9 @@ flowchart LR
     B3["📝 Create<br/>Checklist"]
     B1 --> B2 --> B3
   end
-  
+
   A4 --> B1
-  
+
   %% Styling
   classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:3px,color:#1a1a1a,padding:15px;
   classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:3px,color:#1a1a1a;

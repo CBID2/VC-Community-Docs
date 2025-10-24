@@ -86,21 +86,28 @@ Includes Editors and Graphics Coordinator (GC) who handle post-event cleanup of 
 The following diagram shows the workflow for scheduling a Lunch & Learn.
 
 ```mermaid
-%%{init: { "themeVariables": { "fontSize": "18px" }, "flowchart": { "nodeSpacing": 40, "rankSpacing": 60, "padding": 8, "htmlLabels": true } } }%%
-flowchart TB
-  A1[📝 Submit Request] --> A2[📥 Receive Form]
-  A2 --> A3[📅 Check Calendar]
-  A3 --> B1{📅 Dates?}
-  B1 -- Yes --> B2[✅ Confirm Host]
-  B2 --> B3[📧 Confirm Email]
-  B3 --> B4[📅 Add to Cal]
-  B4 --> B5[🗂 Update Issue]
-  B1 -- No --> C1[🔄 Request New Slots]
-  C1 --> C2[📬 Receive Options]
-  C2 --> D1{✅ Options OK?}
-  D1 -- Yes --> A3
-  D1 -- No --> C3[🕒 Set New Deadline]
-  C3 --> C1
+flowchart LR
+  %% Left Column - Initial Request
+  subgraph A[📬 Request Submission]
+    A1[📅 Speaker Submits Request] --> A2[📋 LC Reviews Request]
+  end
+
+  %% Right Column - Date Selection
+  subgraph B[📅 Date Coordination]
+    B1[🗓 Check Calendar] --> B2[⏰ Check Time Slots]
+    B2 --> B3{✅ Options OK?}
+    B3 -- Yes --> B4[📅 Date Confirmed]
+    B3 -- No --> B5[🔄 Request New Dates]
+    B5 --> B1
+  end
+
+  %% Flow between columns
+  A2 --> B1
+
+  %% Styling
+  classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:2px,color:#333;
+  classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:2px,color:#333;
+  class A,B process;
 ```
 
 1. The LC checks the calendar for availability in order of the Speaker's preferred dates.

@@ -42,45 +42,106 @@ Below is a diagram the Monthly Challenge workflow.
 #### Planning + Coordination
 
 ```mermaid
-%%{init: { "themeVariables": { "fontSize": "20px" }, "flowchart": { "nodeSpacing": 50, "rankSpacing": 70, "padding": 10 } } }%%
-flowchart TB
-  A1[📢 Planning] --> A2[👥 Share Time]
-  A2 --> A3[📝 Propose]
-  A3 --> B1[🤝 Plan w/ Hosts]
+flowchart LR
+  %% Left Column - Initial Planning
+  subgraph A[📅 Initial Planning]
+    A1[🗓 Review Schedule] --> A2[👥 Coordinate with Team]
+    A2 --> A3[💡 Propose Ideas]
+  end
+
+  %% Right Column - Coordination
+  subgraph B[🤝 Team Coordination]
+    B1[📧 Contact Hosts] --> B2[📅 Align Schedules]
+    B2 --> B3[✅ Finalize Plan]
+  end
+
+  %% Flow between columns
+  A3 --> B1
+
+  %% Styling
+  classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:2px,color:#333;
+  classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:2px,color:#333;
+  class A,B process;
 ```
 
 #### Blog + Website
 
 ```mermaid
-%%{init: { "themeVariables": { "fontSize": "20px" }, "flowchart": { "nodeSpacing": 50, "rankSpacing": 70, "padding": 10 } } }%%
-flowchart TB
-  C1[📝 Write Blog] --> C2[🔍 Proofread]
-  C2 --> D0{✅ OK?}
-  D0 -- Yes --> D1[🌐 Update Pages]
-  D0 -- No --> D2[✏️ Revise]
-  D2 --> C2
+flowchart LR
+  %% Left Column - Content Creation
+  subgraph A[📝 Content Creation]
+    A1[✍️ Draft Blog Post] --> A2[👥 Team Review]
+    A2 --> A3{Approved?}
+    A3 -- No --> A4[✏️ Revise Content]
+    A4 --> A2
+  end
+
+  %% Right Column - Publication
+  subgraph B[🌐 Website Updates]
+    B1[📝 Update Website] --> B2[🔍 Review Changes]
+    B2 --> B3[✅ Publish Updates]
+  end
+
+  %% Flow between columns
+  A3 -- Yes --> B1
+
+  %% Styling
+  classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:2px,color:#333;
+  classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:2px,color:#333;
+  class A,B process;
 ```
 
 #### Announcement
 
 ```mermaid
-%%{init: { "themeVariables": { "fontSize": "20px" }, "flowchart": { "nodeSpacing": 50, "rankSpacing": 70, "padding": 10 } } }%%
-flowchart TB
-  E1[📢 Update] --> E2[📢 Announce]
+flowchart LR
+  %% Left Column - Preparation
+  subgraph A[📢 Preparation]
+    A1[📝 Draft Announcement] --> A2[👥 Team Review]
+    A2 --> A3{Approved?}
+    A3 -- No --> A4[✏️ Revise]
+    A4 --> A2
+  end
+
+  %% Right Column - Distribution
+  subgraph B[📣 Distribution]
+    B1[📧 Email List] --> B2[💬 Slack Channels]
+    B2 --> B3[📱 Social Media]
+  end
+
+  %% Flow between columns
+  A3 -- Yes --> B1
+
+  %% Styling
+  classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:2px,color:#333;
+  classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:2px,color:#333;
+  class A,B process;
 ```
 
 #### Check-Ins + Post-Challenge
 
 ```mermaid
-%%{init: { "themeVariables": { "fontSize": "20px" }, "flowchart": { "nodeSpacing": 50, "rankSpacing": 70, "padding": 10 } } }%%
-flowchart TB
-  F1[📅 Goals] --> F2[💬 Weekly]
-  F2 --> F3[🤖 Automate]
-  F3 --> G1[💬 Feedback]
-  G1 --> G0{More updates?}
-  G0 -- Yes --> G2[📝 Update Docs]
-  G2 --> G1
-  G0 -- No --> H1[🏁]
+flowchart LR
+  %% Left Column - During Challenge
+  subgraph A[📅 During Challenge]
+    A1[🎯 Set Goals] --> A2[💬 Weekly Check-ins]
+    A2 --> A3[👥 Community Engagement]
+  end
+
+  %% Right Column - Post Challenge
+  subgraph B[📊 Post-Challenge]
+    B1[📝 Gather Feedback] --> B2[📊 Review Outcomes]
+    B2 --> B3[📚 Update Documentation]
+    B3 --> B4[🎉 Celebrate Success]
+  end
+
+  %% Flow between columns
+  A3 --> B1
+
+  %% Styling
+  classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:2px,color:#333;
+  classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:2px,color:#333;
+  class A,B process;
 ```
 
 ## Before the Challenge

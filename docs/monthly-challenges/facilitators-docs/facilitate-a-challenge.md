@@ -42,105 +42,129 @@ Below is a diagram the Monthly Challenge workflow.
 #### Planning + Coordination
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'fontSize':'18px', 'fontFamily':'arial'}}}%%
 flowchart LR
   %% Left Column - Initial Planning
-  subgraph A[📅 Initial Planning]
-    A1[🗓 Review Schedule] --> A2[👥 Coordinate with Team]
-    A2 --> A3[💡 Propose Ideas]
+  subgraph A["📅 Initial Planning"]
+    direction TB
+    A1["🗓 Review<br/>Schedule"]
+    A2["👥 Coordinate<br/>with Team"]
+    A3["💡 Propose<br/>Ideas"]
+    A1 --> A2 --> A3
   end
 
   %% Right Column - Coordination
-  subgraph B[🤝 Team Coordination]
-    B1[📧 Contact Hosts] --> B2[📅 Align Schedules]
-    B2 --> B3[✅ Finalize Plan]
+  subgraph B["🤝 Team Coordination"]
+    direction TB
+    B1["📧 Contact<br/>Hosts"]
+    B2["📅 Align<br/>Schedules"]
+    B3["✅ Finalize<br/>Plan"]
+    B1 --> B2 --> B3
   end
 
   %% Flow between columns
   A3 --> B1
 
   %% Styling
-  classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:2px,color:#333;
-  classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:2px,color:#333;
+  classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:3px,color:#1a1a1a,padding:15px;
+  classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:3px,color:#1a1a1a;
   class A,B process;
 ```
 
 #### Blog + Website
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'fontSize':'18px', 'fontFamily':'arial'}}}%%
 flowchart LR
   %% Left Column - Content Creation
-  subgraph A[📝 Content Creation]
-    A1[✍️ Draft Blog Post] --> A2[👥 Team Review]
-    A2 --> A3{Approved?}
-    A3 -- No --> A4[✏️ Revise Content]
-    A4 --> A2
+  subgraph A["📝 Content Creation"]
+    direction TB
+    A1["✍️ Draft Blog Post<br/>& Get Feedback"]
+    A2["✏️ Revise<br/>Content"]
+    A3["✅ Final<br/>Approval"]
+    A1 --> A2 --> A3
   end
 
   %% Right Column - Publication
-  subgraph B[🌐 Website Updates]
-    B1[📝 Update Website] --> B2[🔍 Review Changes]
-    B2 --> B3[✅ Publish Updates]
-  end
-
-  %% Flow between columns
-  A3 -- Yes --> B1
-
-  %% Styling
-  classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:2px,color:#333;
-  classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:2px,color:#333;
-  class A,B process;
-```
-
-#### Announcement
-
-```mermaid
-flowchart LR
-  %% Left Column - Preparation
-  subgraph A[📢 Preparation]
-    A1[📝 Draft Announcement] --> A2[👥 Team Review]
-    A2 --> A3{Approved?}
-    A3 -- No --> A4[✏️ Revise]
-    A4 --> A2
-  end
-
-  %% Right Column - Distribution
-  subgraph B[📣 Distribution]
-    B1[📧 Email List] --> B2[💬 Slack Channels]
-    B2 --> B3[📱 Social Media]
-  end
-
-  %% Flow between columns
-  A3 -- Yes --> B1
-
-  %% Styling
-  classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:2px,color:#333;
-  classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:2px,color:#333;
-  class A,B process;
-```
-
-#### Check-Ins + Post-Challenge
-
-```mermaid
-flowchart LR
-  %% Left Column - During Challenge
-  subgraph A[📅 During Challenge]
-    A1[🎯 Set Goals] --> A2[💬 Weekly Check-ins]
-    A2 --> A3[👥 Community Engagement]
-  end
-
-  %% Right Column - Post Challenge
-  subgraph B[📊 Post-Challenge]
-    B1[📝 Gather Feedback] --> B2[📊 Review Outcomes]
-    B2 --> B3[📚 Update Documentation]
-    B3 --> B4[🎉 Celebrate Success]
+  subgraph B["🌐 Website Updates"]
+    direction TB
+    B1["📝 Update<br/>Website"]
+    B2["🔍 Review<br/>Changes"]
+    B3["✅ Publish<br/>Updates"]
+    B1 --> B2 --> B3
   end
 
   %% Flow between columns
   A3 --> B1
 
   %% Styling
-  classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:2px,color:#333;
-  classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:2px,color:#333;
+  classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:3px,color:#1a1a1a,padding:15px;
+  classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:3px,color:#1a1a1a;
+  class A,B process;
+```
+
+#### Announcement
+
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'fontSize':'18px', 'fontFamily':'arial'}}}%%
+flowchart LR
+  %% Left Column - Preparation
+  subgraph A["📢 Preparation"]
+    direction TB
+    A1["📝 Draft<br/>Announcement"]
+    A2["✏️ Get Feedback<br/>& Revise"]
+    A3["✅ Final<br/>Approval"]
+    A1 --> A2 --> A3
+  end
+
+  %% Right Column - Distribution
+  subgraph B["📣 Distribution"]
+    direction TB
+    B1["📧 Send to<br/>Email List"]
+    B2["💬 Post in<br/>Slack Channels"]
+    B3["📱 Share on<br/>Social Media"]
+    B1 --> B2 --> B3
+  end
+
+  %% Flow between columns
+  A3 --> B1
+
+  %% Styling
+  classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:3px,color:#1a1a1a,padding:15px;
+  classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:3px,color:#1a1a1a;
+  class A,B process;
+```
+
+#### Check-Ins + Post-Challenge
+
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'fontSize':'18px', 'fontFamily':'arial'}}}%%
+flowchart LR
+  %% Left Column - During Challenge
+  subgraph A["📅 During Challenge"]
+    direction TB
+    A1["🎯 Set<br/>Goals"]
+    A2["💬 Weekly<br/>Check-ins"]
+    A3["👥 Community<br/>Engagement"]
+    A1 --> A2 --> A3
+  end
+
+  %% Right Column - Post Challenge
+  subgraph B["📊 Post-Challenge"]
+    direction TB
+    B1["📝 Gather<br/>Feedback"]
+    B2["📊 Review<br/>Outcomes"]
+    B3["📚 Update<br/>Documentation"]
+    B4["🎉 Celebrate<br/>Success"]
+    B1 --> B2 --> B3 --> B4
+  end
+
+  %% Flow between columns
+  A3 --> B1
+
+  %% Styling
+  classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:3px,color:#1a1a1a,padding:15px;
+  classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:3px,color:#1a1a1a;
   class A,B process;
 ```
 

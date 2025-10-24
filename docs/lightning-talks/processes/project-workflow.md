@@ -40,134 +40,173 @@ Below is the workflow for the Lightning Talks Event.
 ### Planning {#planning-section}
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'fontSize':'18px', 'fontFamily':'arial'}}}%%
 flowchart LR
   %% Left Column - Team Formation
-  subgraph A[👥 Team Formation]
-    A1[📢 Call for Team] --> A2[👥 Onboard Team]
-    A2 --> A3[📝 Assign Coordinators]
+  subgraph A["👥 Team Formation"]
+    direction TB
+    A1["📢 Call for<br/>Team Members"]
+    A2["👥 Onboard<br/>New Team"]
+    A3["📝 Assign<br/>Coordinators"]
+    A4["📋 Review<br/>Responsibilities"]
+    A1 --> A2 --> A3 --> A4
   end
-
+  
+  %% Right Column - Initial Planning
+  subgraph B["📋 Initial Planning"]
+    direction TB
+    B1["📅 Set<br/>Timeline"]
+    B2["🎯 Define<br/>Goals"]
+    B3["📝 Create<br/>Checklist"]
+    B1 --> B2 --> B3
+  end
+  
+  A4 --> B1
+  
   %% Styling
-  classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:2px,color:#333;
-  classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:2px,color:#333;
-  class A process;
-
-  %% Adjust width to match other sections
-  style A width: 300px
+  classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:3px,color:#1a1a1a,padding:15px;
+  classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:3px,color:#1a1a1a;
+  class A,B process;
 ```
 
 ### 📢 CFP (Call For Proposals) {#cfp-section}
 
-<div class="mermaid-cfp">
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'fontSize':'18px', 'fontFamily':'arial'}}}%%
 flowchart LR
   %% Left Column - Proposal Collection
-  subgraph A[📬 Proposal Collection]
-    A1[📣 CFP Opens] --> A2[🧾 Collect Proposals]
-    A2 --> A3{Enough?}
-    A3 -- No --> A4[📢 Extend CFP]
-    A4 --> A2
+  subgraph A["📬 Proposal Collection"]
+    direction TB
+    A1["📣 CFP<br/>Opens"]
+    A2["🧾 Collect<br/>Proposals"]
+    A3{"Enough<br/>Proposals?"}
+    A4["📢 Extend<br/>CFP Period"]
+    A1 --> A2 --> A3
+    A3 -- No --> A4 --> A2
   end
 
-%% Right Column - Scheduling
-subgraph B[📅 Scheduling]
-B1[👩‍💻 Grouping] --> B2[📅 Schedule Talks]
-B2 --> B3[📝 Send Confirmations]
-B3 --> B4[📅 Add to Calendar]
-B4 --> B5[📢 Share Schedule]
-end
+  %% Right Column - Scheduling
+  subgraph B["📅 Scheduling"]
+    direction TB
+    B1["👩‍💻 Group<br/>by Topic"]
+    B2["📅 Schedule<br/>Talks"]
+    B3["📝 Send<br/>Confirmations"]
+    B4["📅 Add to<br/>Calendar"]
+    B5["📢 Share<br/>Schedule"]
+    B1 --> B2 --> B3 --> B4 --> B5
+  end
 
-%% Flow between columns
-A3 -- Yes --> B1
+  %% Flow between columns
+  A3 -- Yes --> B1
 
-%% Styling
-classDef default fill:#f0f7ff,stroke:#1976d2,stroke-width:2px,color:#0d47a1;
-classDef process fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#0d47a1;
-classDef decision fill:#fff8e1,stroke:#ff8f00,stroke-width:2px,color:#e65100;
-class A,B process;
-class A3 decision;
+  %% Styling
+  classDef default fill:#f0f7ff,stroke:#1976d2,stroke-width:3px,color:#0d47a1,padding:15px;
+  classDef process fill:#e3f2fd,stroke:#1976d2,stroke-width:3px,color:#0d47a1;
+  classDef decision fill:#fff8e1,stroke:#ff8f00,stroke-width:3px,color:#e65100;
+  class A,B process;
+  class A3 decision;
+```
 
-%% Adjust spacing
-style A width: 350px
-style B width: 350px
-
-%% Make the diagram more compact
-linkStyle default stroke-width:1.5px,fill:none,stroke:#1976d2
-
-````
-</div>
-
-#### Speaker Prep
+### Speaker Prep {#speaker-prep-section}
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'fontSize':'18px', 'fontFamily':'arial'}}}%%
 flowchart LR
   %% Left Column - Talk Organization
-  subgraph A[🗂 Talk Preparation]
-    A1[🗂 Organize Talks] --> A2[✅ Checklists]
-    A2 --> A3{Missing?}
-    A3 -- Yes --> A4[📬 Request Info]
-    A4 --> A2
+  subgraph A["🗂 Talk Preparation"]
+    direction TB
+    A1["🗂 Organize<br/>Talks"]
+    A2["✅ Send<br/>Checklists"]
+    A3{"Info<br/>Missing?"}
+    A4["📬 Request<br/>Info"]
+    A1 --> A2 --> A3
+    A3 -- Yes --> A4 --> A2
   end
 
   %% Right Column - Speaker Materials
-  subgraph B[👤 Speaker Materials]
-    B1[📸 Speaker Info] --> B2[📁 Shared Folder]
+  subgraph B["👤 Speaker Materials"]
+    direction TB
+    B1["📸 Collect<br/>Speaker Info"]
+    B2["📁 Create<br/>Shared Folder"]
+    B3["✅ Verify<br/>Materials"]
+    B1 --> B2 --> B3
   end
 
   %% Flow between columns
   A3 -- No --> B1
 
   %% Styling
-  classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:2px,color:#333;
-  classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:2px,color:#333;
+  classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:3px,color:#1a1a1a,padding:15px;
+  classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:3px,color:#1a1a1a;
+  classDef decision fill:#fff8e1,stroke:#ff8f00,stroke-width:3px,color:#e65100;
   class A,B process;
-````
+  class A3 decision;
+```
 
-#### Event
+### Event {#event-section}
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'fontSize':'18px', 'fontFamily':'arial'}}}%%
 flowchart LR
   %% Left Column - Pre-Event
-  subgraph A[📋 Pre-Event]
-    A1[🧾 Final Prep] --> A2[📨 Directions to Speakers]
+  subgraph A["📋 Pre-Event"]
+    direction TB
+    A1["🧾 Final Prep &<br/>Tech Check"]
+    A2["📨 Send Directions<br/>to Speakers"]
+    A3["🔗 Share<br/>Event Link"]
+    A4["⏰ Set<br/>Reminders"]
+    A1 --> A2 --> A3 --> A4
   end
 
   %% Right Column - Event
-  subgraph B[🎤 Event]
-    B1[🎬 Start Recording] --> B2[🧑‍🏫 Talks Begin]
+  subgraph B["🎤 Event"]
+    direction TB
+    B1["🎬 Start<br/>Recording"]
+    B2["🧑‍🏫 Talks<br/>Begin"]
+    B3["❓ Q&A<br/>Session"]
+    B1 --> B2 --> B3
   end
 
   %% Flow between columns
-  A2 --> B1
+  A4 --> B1
 
   %% Styling
-  classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:2px,color:#333;
-  classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:2px,color:#333;
+  classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:3px,color:#1a1a1a,padding:15px;
+  classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:3px,color:#1a1a1a;
   class A,B process;
 ```
 
-#### Post-Event
+### Post-Event {#post-event-section}
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'fontSize':'18px', 'fontFamily':'arial'}}}%%
 flowchart LR
   %% Left Column - Video Processing
-  subgraph A[🎥 Video Processing]
-    A1[📹 Process Recording] --> A2[☁️ Upload to YouTube]
-    A2 --> A3[📝 Add Description & Tags]
+  subgraph A["🎥 Video Processing"]
+    direction TB
+    A1["📹 Process<br/>Recording"]
+    A2["☁️ Upload to<br/>YouTube"]
+    A3["📝 Add Description<br/>& Tags"]
+    A4["🔗 Share<br/>Video"]
+    A1 --> A2 --> A3 --> A4
   end
 
   %% Right Column - Follow-up
-  subgraph B[📣 Follow-up]
-    B1[🙏 Thank Speakers] --> B2[📊 Gather Feedback]
-    B2 --> B3[📈 Review Metrics]
+  subgraph B["📣 Follow-up"]
+    direction TB
+    B1["🙏 Thank<br/>Speakers"]
+    B2["📊 Gather<br/>Feedback"]
+    B3["📈 Review<br/>Metrics"]
+    B4["📋 Document<br/>Learnings"]
+    B1 --> B2 --> B3 --> B4
   end
 
   %% Flow between columns
-  A3 --> B1
+  A4 --> B1
 
   %% Styling
-  classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:2px,color:#333;
-  classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:2px,color:#333;
+  classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:3px,color:#1a1a1a,padding:15px;
+  classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:3px,color:#1a1a1a;
   class A,B process;
 ```
 

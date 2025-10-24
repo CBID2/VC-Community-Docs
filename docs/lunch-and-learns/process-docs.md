@@ -71,6 +71,42 @@ Includes Editors and Graphics Coordinator (GC) who handle post-event cleanup of 
 
 ## Scheduling a Lunch & Learn
 
+### Overview of the Scheduling Process
+
+Here's a visual overview of the scheduling workflow that will be explained in detail below:
+
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'fontSize':'22px', 'fontFamily':'arial'}}}%%
+flowchart LR
+  %% Left Column - Initial Request
+  subgraph A["📬 Request Submission"]
+    direction TB
+    A1["📅 Speaker Submits<br/>Request Form"]
+    A2["📋 LC Reviews<br/>Request"]
+    A3["✅ Approve<br/>Topic"]
+    A1 --> A2 --> A3
+  end
+
+  %% Right Column - Date Selection
+  subgraph B["📅 Date Coordination"]
+    direction TB
+    B1["🗓 Check Available<br/>Calendar Dates"]
+    B2["⏰ Coordinate<br/>Time Slots"]
+    B3["📅 Confirm Date<br/>with Speaker"]
+    B1 --> B2 --> B3
+  end
+
+  %% Flow between columns
+  A3 --> B1
+
+  %% Styling
+  classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:3px,color:#1a1a1a,padding:15px;
+  classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:3px,color:#1a1a1a;
+  class A,B process;
+```
+
+## Detailed Scheduling Process
+
 ### Lunch & Learn Session Request Is Submitted
 
 - **KICK-OFF ACTION:** The Speaker fills out a Lunch & Learn request form.
@@ -81,34 +117,11 @@ Includes Editors and Graphics Coordinator (GC) who handle post-event cleanup of 
 
 - The LC and DW receive the form submission.
 
-#### Scheduling Workflow
+### Scheduling Workflow
 
-The following diagram shows the workflow for scheduling a Lunch & Learn.
+Once a request is received, the following workflow is initiated to schedule the Lunch & Learn session. This section provides the detailed steps that follow the overview shown above.
 
-```mermaid
-flowchart LR
-  %% Left Column - Initial Request
-  subgraph A[📬 Request Submission]
-    A1[📅 Speaker Submits Request] --> A2[📋 LC Reviews Request]
-  end
-
-  %% Right Column - Date Selection
-  subgraph B[📅 Date Coordination]
-    B1[🗓 Check Calendar] --> B2[⏰ Check Time Slots]
-    B2 --> B3{✅ Options OK?}
-    B3 -- Yes --> B4[📅 Date Confirmed]
-    B3 -- No --> B5[🔄 Request New Dates]
-    B5 --> B1
-  end
-
-  %% Flow between columns
-  A2 --> B1
-
-  %% Styling
-  classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:2px,color:#333;
-  classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:2px,color:#333;
-  class A,B process;
-```
+Here's the step-by-step process for scheduling a Lunch & Learn session:
 
 1. The LC checks the calendar for availability in order of the Speaker's preferred dates.
 

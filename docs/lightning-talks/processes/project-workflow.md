@@ -51,7 +51,7 @@ flowchart LR
   classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:2px,color:#333;
   classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:2px,color:#333;
   class A process;
-  
+
   %% Adjust width to match other sections
   style A width: 300px
 ```
@@ -69,31 +69,32 @@ flowchart LR
     A4 --> A2
   end
 
-  %% Right Column - Scheduling
-  subgraph B[📅 Scheduling]
-    B1[👩‍💻 Grouping] --> B2[📅 Schedule Talks]
-    B2 --> B3[📝 Send Confirmations]
-    B3 --> B4[📅 Add to Calendar]
-    B4 --> B5[📢 Share Schedule]
-  end
+%% Right Column - Scheduling
+subgraph B[📅 Scheduling]
+B1[👩‍💻 Grouping] --> B2[📅 Schedule Talks]
+B2 --> B3[📝 Send Confirmations]
+B3 --> B4[📅 Add to Calendar]
+B4 --> B5[📢 Share Schedule]
+end
 
-  %% Flow between columns
-  A3 -- Yes --> B1
+%% Flow between columns
+A3 -- Yes --> B1
 
-  %% Styling
-  classDef default fill:#f0f7ff,stroke:#1976d2,stroke-width:2px,color:#0d47a1;
-  classDef process fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#0d47a1;
-  classDef decision fill:#fff8e1,stroke:#ff8f00,stroke-width:2px,color:#e65100;
-  class A,B process;
-  class A3 decision;
-  
-  %% Adjust spacing
-  style A width: 350px
-  style B width: 350px
-  
-  %% Make the diagram more compact
-  linkStyle default stroke-width:1.5px,fill:none,stroke:#1976d2
-```
+%% Styling
+classDef default fill:#f0f7ff,stroke:#1976d2,stroke-width:2px,color:#0d47a1;
+classDef process fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#0d47a1;
+classDef decision fill:#fff8e1,stroke:#ff8f00,stroke-width:2px,color:#e65100;
+class A,B process;
+class A3 decision;
+
+%% Adjust spacing
+style A width: 350px
+style B width: 350px
+
+%% Make the diagram more compact
+linkStyle default stroke-width:1.5px,fill:none,stroke:#1976d2
+
+````
 </div>
 
 #### Speaker Prep
@@ -120,7 +121,7 @@ flowchart LR
   classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:2px,color:#333;
   classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:2px,color:#333;
   class A,B process;
-```
+````
 
 #### Event
 

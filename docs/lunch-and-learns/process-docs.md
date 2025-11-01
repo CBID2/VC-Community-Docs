@@ -74,36 +74,47 @@ Includes Editors and Graphics Coordinator (GC) who handle post-event cleanup of 
 ### Overview of the Scheduling Process
 
 Here's a visual overview of the scheduling workflow that will be explained in detail below:
-
+<details>
+  <summary>📊 View Workflow Diagram for Scheduling a Lunch & Learn</summary>
+  <div style={{marginTop: '1rem'}}>
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontSize':'22px', 'fontFamily':'arial'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'fontSize':'30px', 'fontFamily':'arial'}}}%%
 flowchart LR
-  %% Left Column - Initial Request
-  subgraph A["📬 Request Submission"]
+  %% Left Column - Request Review
+  subgraph A["📬 Request Review"]
     direction TB
-    A1["📅 Speaker Submits<br/>Request Form"]
-    A2["📋 LC Reviews<br/>Request"]
-    A3["✅ Approve<br/>Topic"]
+    A1["📅 Speaker submits<br/>request form"]
+    A2["📋 LC and DW <br/> review topic"]
+    A3["✅ Topic is approved"]
     A1 --> A2 --> A3
   end
 
-  %% Right Column - Date Selection
-  subgraph B["📅 Date Coordination"]
+  %% Right Column - Scheduling Stage 
+  subgraph B[Scheduling 📅]
     direction TB
-    B1["🗓 Check Available<br/>Calendar Dates"]
-    B2["⏰ Coordinate<br/>Time Slots"]
-    B3["📅 Confirm Date<br/>with Speaker"]
+    B1["LC Checks Calendar for Speaker preferred Dates 🗓"]
+    B2["LC confirms availability of Host and Moderator 🗣️"]
+    B3{"Are time slots\navailable?"}
+    B4["LC Confirms and Finalizes date with Speaker 📅"]
+    B5["Add Event to VC Google Calendar 📅"]
+    B6[LC invites Host, Speaker, and Moderator to event 🤝]
+    B7["LC requests additional time slots nor suggests postponement"]
+    
     B1 --> B2 --> B3
+    B3 -->|Yes| B4 --> B5 --> B6
+    B3 -->|No| B7 --> B1
   end
 
   %% Flow between columns
-  A3 --> B1
+  A3 --> B1 --> B2 --> B3 --> B4 --> B5
 
   %% Styling
   classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:3px,color:#1a1a1a,padding:15px;
   classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:3px,color:#1a1a1a;
   class A,B process;
 ```
+</div>
+</details>
 
 ## Detailed Scheduling Process
 

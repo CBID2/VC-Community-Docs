@@ -37,136 +37,78 @@ Let us know your availability for the challenge in the reminder thread that drop
 
 If you have ideas for a new challenge(s), you can propose and discuss them in the `#vc-monthly-challenge-team` channel on Slack or open a new [discussion on GitHub](https://github.com/Virtual-Coffee/VC-Community-Docs/discussions).
 
-Below is a diagram the Monthly Challenge workflow.
+Below are diagrams of the Monthly Challenge workflow. Click to expand each section to view the detailed workflow.
 
-#### Planning + Coordination
+<details>
+  <summary>📊 View Workflow Diagrams</summary>
+  <div style={{marginTop: '1rem'}}>
 
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontSize':'18px', 'fontFamily':'arial'}}}%%
-flowchart LR
-  %% Left Column - Initial Planning
-  subgraph A["📅 Initial Planning"]
-    direction TB
-    A1["🗓 Review<br/>Schedule"]
-    A2["👥 Coordinate<br/>with Team"]
-    A3["💡 Propose<br/>Ideas"]
-    A1 --> A2 --> A3
-  end
+  #### Planning + Promoting
 
-  %% Right Column - Coordination
-  subgraph B["🤝 Team Coordination"]
-    direction TB
-    B1["📧 Contact<br/>Hosts"]
-    B2["📅 Align<br/>Schedules"]
-    B3["✅ Finalize<br/>Plan"]
-    B1 --> B2 --> B3
-  end
+  ```mermaid
+  %%{init: {'theme':'base', 'themeVariables': {'fontSize':'16px', 'fontFamily':'arial'}}}%%
+  flowchart LR
+    %% Left Column - Planning
+    subgraph A["🛠 Planning"]
+      direction TB
+      A1["📢 Team leads receive ideas from members"]
+      A2["👥 Team leads pick an idea"]
+      A3["☕ Team leads and Coffee Table Group hosts discuss challenge details"]
+      A1 --> A2 --> A3
+    end
 
-  %% Flow between columns
-  A3 --> B1
+    %% Right Column - Promoting
+    subgraph B["📬 Promoting"]
+      direction TB
+      B1["💬 Update #monthly-challenge channel topic a week before launch"]
+      B2["📣 Publish post about the challenge on VC's blog"]
+      B3["🧾 Post challenge announcement in #monthly-challenge Slack channel"]
+      B4["👩‍💻 Crosspost announcement to other community channels"]
+      B1 --> B2 --> B3 --> B4
+    end
 
-  %% Styling
-  classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:3px,color:#1a1a1a,padding:15px;
-  classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:3px,color:#1a1a1a;
-  class A,B process;
-```
+    %% Flow between columns
+    A3 --> B1
 
-#### Blog + Website
+    %% Styling
+    classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:3px,color:#1a1a1a,padding:15px;
+    classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:3px,color:#1a1a1a;
+    class A,B process;
+  ```
 
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontSize':'18px', 'fontFamily':'arial'}}}%%
-flowchart LR
-  %% Left Column - Content Creation
-  subgraph A["📝 Content Creation"]
-    direction TB
-    A1["✍️ Draft Blog Post<br/>& Get Feedback"]
-    A2["✏️ Revise<br/>Content"]
-    A3["✅ Final<br/>Approval"]
-    A1 --> A2 --> A3
-  end
+  #### Check-Ins + Post-Challenge
 
-  %% Right Column - Publication
-  subgraph B["🌐 Website Updates"]
-    direction TB
-    B1["📝 Update<br/>Website"]
-    B2["🔍 Review<br/>Changes"]
-    B3["✅ Publish<br/>Updates"]
-    B1 --> B2 --> B3
-  end
+  ```mermaid
+  %%{init: {'theme':'base', 'themeVariables': {'fontSize':'16px', 'fontFamily':'arial'}}}%%
+  flowchart LR
+    %% Left Column - Check-Ins
+    subgraph A["🧭 Check-ins"]
+      direction TB
+      A1["🗂 Participants set personal goals Mondays at 10 AM"]
+      A2["✅ Post thread for async progress updates"]
+      A3["🤖 Automate check-ins for certain challenges"]
+      A1 --> A2 --> A3
+    end
 
-  %% Flow between columns
-  A3 --> B1
+    %% Right Column - Post Challenge
+    subgraph B["🌟 Post-Challenge"]
+      direction TB
+      B1["🗒️ Collect feedback and takeaways from participants"]
+      B2["📰 Publish challenge recap in newsletter or blog"]
+      B3["🔄 Plan improvements for future challenges"]
+      B1 --> B2 --> B3 
+    end
 
-  %% Styling
-  classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:3px,color:#1a1a1a,padding:15px;
-  classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:3px,color:#1a1a1a;
-  class A,B process;
-```
+    %% Flow between stages
+    A3 --> B1
 
-#### Announcement
-
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontSize':'18px', 'fontFamily':'arial'}}}%%
-flowchart LR
-  %% Left Column - Preparation
-  subgraph A["📢 Preparation"]
-    direction TB
-    A1["📝 Draft<br/>Announcement"]
-    A2["✏️ Get Feedback<br/>& Revise"]
-    A3["✅ Final<br/>Approval"]
-    A1 --> A2 --> A3
-  end
-
-  %% Right Column - Distribution
-  subgraph B["📣 Distribution"]
-    direction TB
-    B1["📧 Send to<br/>Email List"]
-    B2["💬 Post in<br/>Slack Channels"]
-    B3["📱 Share on<br/>Social Media"]
-    B1 --> B2 --> B3
-  end
-
-  %% Flow between columns
-  A3 --> B1
-
-  %% Styling
-  classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:3px,color:#1a1a1a,padding:15px;
-  classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:3px,color:#1a1a1a;
-  class A,B process;
-```
-
-#### Check-Ins + Post-Challenge
-
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontSize':'18px', 'fontFamily':'arial'}}}%%
-flowchart LR
-  %% Left Column - During Challenge
-  subgraph A["📅 During Challenge"]
-    direction TB
-    A1["🎯 Set<br/>Goals"]
-    A2["💬 Weekly<br/>Check-ins"]
-    A3["👥 Community<br/>Engagement"]
-    A1 --> A2 --> A3
-  end
-
-  %% Right Column - Post Challenge
-  subgraph B["📊 Post-Challenge"]
-    direction TB
-    B1["📝 Gather<br/>Feedback"]
-    B2["📊 Review<br/>Outcomes"]
-    B3["📚 Update<br/>Documentation"]
-    B4["🎉 Celebrate<br/>Success"]
-    B1 --> B2 --> B3 --> B4
-  end
-
-  %% Flow between columns
-  A3 --> B1
-
-  %% Styling
-  classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:3px,color:#1a1a1a,padding:15px;
-  classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:3px,color:#1a1a1a;
-  class A,B process;
-```
+    %% Styling
+    classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:3px,color:#1a1a1a,padding:15px;
+    classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:3px,color:#1a1a1a;
+    class A,B process;
+  ```
+  </div>
+</details>
 
 ## Before the Challenge
 

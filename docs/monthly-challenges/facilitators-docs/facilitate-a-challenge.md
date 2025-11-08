@@ -46,7 +46,7 @@ Below are diagrams of the Monthly Challenge workflow. Click to expand each secti
 #### Planning + Promoting
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontSize':'16px', 'fontFamily':'arial'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'fontSize':'24px', 'fontFamily':'arial'}}}%%
 flowchart LR
   %% Left Column - Planning
   subgraph A["🛠 Planning"]
@@ -79,7 +79,7 @@ flowchart LR
 #### Check-Ins + Post-Challenge
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontSize':'16px', 'fontFamily':'arial'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'fontSize':'23px', 'fontFamily':'arial'}}}%%
 flowchart LR
   %% Left Column - Check-Ins
   subgraph A["🧭 Check-ins"]
@@ -90,7 +90,7 @@ flowchart LR
     A1 --> A2 --> A3
   end
 
-  %% Right Column - Post Challenge
+  %% Right Column - Post-Challenge
   subgraph B["🌟 Post-Challenge"]
     direction TB
     B1["🗒️ Collect feedback and takeaways from participants"]

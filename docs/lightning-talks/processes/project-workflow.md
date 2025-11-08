@@ -79,7 +79,6 @@ flowchart LR
   </div>
 </details>
 
-
 ### CFP (Call For Proposals) {#cfp-section}
 
 <details>
@@ -125,7 +124,6 @@ flowchart LR
   </div>
 </details>
 
-
 ### Speaker Prep {#speaker-prep-section}
 
 <details>
@@ -169,7 +167,6 @@ flowchart LR
   </div>
 </details>
 
-
 ### Event {#event-section}
 
 <details>
@@ -209,7 +206,6 @@ flowchart LR
 
   </div>
 </details>
-
 
 ### Post-Event {#post-event-section}
 
@@ -251,7 +247,6 @@ flowchart LR
 
   </div>
 </details>
-
 
 ### Specifics {#specifics-section}
 

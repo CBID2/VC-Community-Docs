@@ -37,30 +37,37 @@ The function of the Lightning Talks Event is to allow opportunities for members 
 
 Below is the workflow for the Lightning Talks Event.
 
-### Planning {#planning-section}
+## Lightning Talk Workflow
+
+<details>
+  <summary>📊 View Lightning Talk Workflow Diagram</summary>
+  <div style={{marginTop: '1rem'}}>
+
+### Planning Phase
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontSize':'18px', 'fontFamily':'arial'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'fontSize':'24px', 'fontFamily':'arial'}}}%%
 flowchart LR
-  %% Left Column - Team Formation
-  subgraph A["👥 Team Formation"]
+  %% Left Column - Team Forming
+  subgraph A["👥 Team Forming"]
     direction TB
-    A1["📢 Call for<br/>Team Members"]
-    A2["👥 Onboard<br/>New Team"]
-    A3["📝 Assign<br/>Coordinators"]
-    A4["📋 Review<br/>Responsibilities"]
+    A1["📢 Call for Team Members"]
+    A2["👥 Onboard New Team"]
+    A3["📝 Assign Coordinators"]
+    A4["📋 Review Responsibilities"]
     A1 --> A2 --> A3 --> A4
   end
 
   %% Right Column - Initial Planning
   subgraph B["📋 Initial Planning"]
     direction TB
-    B1["📅 Set<br/>Timeline"]
-    B2["🎯 Define<br/>Goals"]
-    B3["📝 Create<br/>Checklist"]
+    B1["📅 Set Timeline"]
+    B2["🎯 Define Goals"]
+    B3["📝 Create Checklist"]
     B1 --> B2 --> B3
   end
 
+  %% Flow between columns
   A4 --> B1
 
   %% Styling
@@ -69,18 +76,26 @@ flowchart LR
   class A,B process;
 ```
 
-### 📢 CFP (Call For Proposals) {#cfp-section}
+  </div>
+</details>
+
+
+### CFP (Call For Proposals) {#cfp-section}
+
+<details>
+  <summary>📋 View CFP Process Diagram</summary>
+  <div style={{marginTop: '1rem'}}>
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontSize':'18px', 'fontFamily':'arial'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'fontSize':'26px', 'fontFamily':'arial'}}}%%
 flowchart LR
   %% Left Column - Proposal Collection
   subgraph A["📬 Proposal Collection"]
     direction TB
-    A1["📣 CFP<br/>Opens"]
-    A2["🧾 Collect<br/>Proposals"]
-    A3{"Enough<br/>Proposals?"}
-    A4["📢 Extend<br/>CFP Period"]
+    A1["📣 CFP Opens"]
+    A2["🧾 Collect Proposals"]
+    A3{"Enough Proposals?"}
+    A4["📢 Extend CFP Period"]
     A1 --> A2 --> A3
     A3 -- No --> A4 --> A2
   end
@@ -88,11 +103,11 @@ flowchart LR
   %% Right Column - Scheduling
   subgraph B["📅 Scheduling"]
     direction TB
-    B1["👩‍💻 Group<br/>by Topic"]
-    B2["📅 Schedule<br/>Talks"]
-    B3["📝 Send<br/>Confirmations"]
-    B4["📅 Add to<br/>Calendar"]
-    B5["📢 Share<br/>Schedule"]
+    B1["👩‍💻 Group by Topic"]
+    B2["📅 Schedule Talks"]
+    B3["📝 Send Confirmations"]
+    B4["📅 Add to Calendar"]
+    B5["📢 Share Schedule"]
     B1 --> B2 --> B3 --> B4 --> B5
   end
 
@@ -107,28 +122,36 @@ flowchart LR
   class A3 decision;
 ```
 
+  </div>
+</details>
+
+
 ### Speaker Prep {#speaker-prep-section}
 
+<details>
+  <summary>🎤 View Speaker Preparation Process</summary>
+  <div style={{marginTop: '1rem'}}>
+
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontSize':'18px', 'fontFamily':'arial'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'fontSize':'24px', 'fontFamily':'arial'}}}%%
 flowchart LR
-  %% Left Column - Talk Organization
+  %% Left Column - Talk Preparation
   subgraph A["🗂 Talk Preparation"]
     direction TB
-    A1["🗂 Organize<br/>Talks"]
-    A2["✅ Send<br/>Checklists"]
-    A3{"Info<br/>Missing?"}
-    A4["📬 Request<br/>Info"]
+    A1["🗂 Organize Talks"]
+    A2["✅ Send Checklists"]
+    A3{"Info Missing?"}
+    A4["📬 Request Info"]
     A1 --> A2 --> A3
     A3 -- Yes --> A4 --> A2
   end
 
-  %% Right Column - Speaker Materials
-  subgraph B["👤 Speaker Materials"]
+  %% Right Column - Speaker Prep
+  subgraph B["👤 Speaker Prep"]
     direction TB
-    B1["📸 Collect<br/>Speaker Info"]
-    B2["📁 Create<br/>Shared Folder"]
-    B3["✅ Verify<br/>Materials"]
+    B1["📸 Collect Speaker Info"]
+    B2["📁 Create Shared Folder"]
+    B3["✅ Verify Materials"]
     B1 --> B2 --> B3
   end
 
@@ -143,27 +166,35 @@ flowchart LR
   class A3 decision;
 ```
 
+  </div>
+</details>
+
+
 ### Event {#event-section}
 
+<details>
+  <summary>🎭 View Event Day Process</summary>
+  <div style={{marginTop: '1rem'}}>
+
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontSize':'18px', 'fontFamily':'arial'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'fontSize':'26px', 'fontFamily':'arial'}}}%%
 flowchart LR
   %% Left Column - Pre-Event
   subgraph A["📋 Pre-Event"]
     direction TB
-    A1["🧾 Final Prep &<br/>Tech Check"]
-    A2["📨 Send Directions<br/>to Speakers"]
-    A3["🔗 Share<br/>Event Link"]
-    A4["⏰ Set<br/>Reminders"]
+    A1["🧾 Final Prep & Tech Check"]
+    A2["📨 Send Directions to Speakers"]
+    A3["🔗 Share Event Link"]
+    A4["⏰ Set Reminders"]
     A1 --> A2 --> A3 --> A4
   end
 
   %% Right Column - Event
   subgraph B["🎤 Event"]
     direction TB
-    B1["🎬 Start<br/>Recording"]
-    B2["🧑‍🏫 Talks<br/>Begin"]
-    B3["❓ Q&A<br/>Session"]
+    B1["🎬 Start Recording"]
+    B2["🧑‍🏫 Talks Begin"]
+    B3["❓ Q&A Session"]
     B1 --> B2 --> B3
   end
 
@@ -176,28 +207,36 @@ flowchart LR
   class A,B process;
 ```
 
+  </div>
+</details>
+
+
 ### Post-Event {#post-event-section}
 
+<details>
+  <summary>📊 View Post-Event Process</summary>
+  <div style={{marginTop: '1rem'}}>
+
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontSize':'18px', 'fontFamily':'arial'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'fontSize':'24px', 'fontFamily':'arial'}}}%%
 flowchart LR
-  %% Left Column - Video Processing
-  subgraph A["🎥 Video Processing"]
+  %% Left Column - Video Editing
+  subgraph A["🎥 Video Editing"]
     direction TB
-    A1["📹 Process<br/>Recording"]
-    A2["☁️ Upload to<br/>YouTube"]
-    A3["📝 Add Description<br/>& Tags"]
-    A4["🔗 Share<br/>Video"]
+    A1["📹 Process Recording"]
+    A2["☁️ Upload to YouTube"]
+    A3["📝 Add Description & Tags"]
+    A4["🔗 Share Video"]
     A1 --> A2 --> A3 --> A4
   end
 
   %% Right Column - Follow-up
   subgraph B["📣 Follow-up"]
     direction TB
-    B1["🙏 Thank<br/>Speakers"]
-    B2["📊 Gather<br/>Feedback"]
-    B3["📈 Review<br/>Metrics"]
-    B4["📋 Document<br/>Learnings"]
+    B1["🙏 Thank Speakers"]
+    B2["📊 Gather Feedback"]
+    B3["📈 Review Metrics"]
+    B4["📋 Document Learnings"]
     B1 --> B2 --> B3 --> B4
   end
 
@@ -209,6 +248,10 @@ flowchart LR
   classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:3px,color:#1a1a1a;
   class A,B process;
 ```
+
+  </div>
+</details>
+
 
 ### Specifics {#specifics-section}
 

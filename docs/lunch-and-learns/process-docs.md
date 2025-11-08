@@ -90,35 +90,36 @@ flowchart LR
     A1 --> A2 --> A3
   end
 
-  %% Right Column - Scheduling Stage
-  subgraph B["Scheduling 📅"]
-    direction TB
-    B1["LC checks calendar for dates 🗓"]
-    B2["Confirm Host/Moderator 🗣️"]
-    B3{"Time slots available?"}
-    B4["Finalize date with Speaker"]
-    B5["Add to Google Calendar"]
-    B6["Send invites to team"]
-    B7["Request more dates if needed"]
-    
+%% Right Column - Scheduling Stage
+subgraph B["Scheduling 📅"]
+direction TB
+B1["LC checks calendar for dates 🗓"]
+B2["Confirm Host/Moderator 🗣️"]
+B3{"Time slots available?"}
+B4["Finalize date with Speaker"]
+B5["Add to Google Calendar"]
+B6["Send invites to team"]
+B7["Request more dates if needed"]
+
     B1 --> B2 --> B3
     B3 -->|Yes| B4
     B3 -->|No| B7
     B4 --> B5 --> B6
-  end
-  
-  %% Connect the two subgraphs
-  A3 --> B1
-  
-  %% Flow within Scheduling
-  B1 --> B2 --> B3
-  B3 -->|Yes| B4 --> B5 --> B6
-  B3 -->|No| B7 --> B1
 
-  %% Styling
-  classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:2px,color:#333,padding:10px;
-  classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:2px,color:#333;
-  class A,B process;
+end
+
+%% Connect the two subgraphs
+A3 --> B1
+
+%% Flow within Scheduling
+B1 --> B2 --> B3
+B3 -->|Yes| B4 --> B5 --> B6
+B3 -->|No| B7 --> B1
+
+%% Styling
+classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:2px,color:#333,padding:10px;
+classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:2px,color:#333;
+class A,B process;
 
 ```
 </div>

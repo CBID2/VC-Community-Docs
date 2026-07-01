@@ -30,54 +30,13 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-/* Mermaid diagram styles */
-.mermaid,
-.theme-mermaid {
+/* Mermaid diagram styles: center diagrams and scroll horizontally when needed.
+   Colors and fonts are controlled by the site-wide `mermaid` config in
+   docusaurus.config.js. */
+.mermaid {
   overflow-x: auto;
-  padding: 0.25rem 0;
-  margin: 0.25rem 0;
-  background: white;
-  border-radius: 4px;
-  font-size: 0.9em;
-}
-
-/* Ensure text is visible and wraps properly */
-.mermaid .label {
-  color: #333 !important;
-  font-family: var(--ifm-font-family-base) !important;
-  font-size: 11px !important;
-  line-height: 1.1 !important;
-  white-space: normal !important;
+  margin: 1.25rem 0;
   text-align: center;
-  padding: 2px 4px;
-}
-
-/* Node styling */
-.mermaid .node rect,
-.mermaid .node circle,
-.mermaid .node polygon,
-.mermaid .node path {
-  fill: #f5f5f5;
-  stroke: #999;
-  stroke-width: 1.5px;
-  rx: 4px;
-  ry: 4px;
-}
-
-/* Arrow styling */
-.mermaid .edgePath path {
-  stroke: #333;
-  stroke-width: 1.5px;
-  fill: none;
-}
-
-/* Subgraph styling */
-.mermaid .cluster rect {
-  fill: #f9f9f9;
-  stroke: #ccc;
-  stroke-width: 1.5px;
-  rx: 6px;
-  ry: 6px;
 }
 
 /* Consistent Section Styling */
@@ -99,83 +58,4 @@
   padding-bottom: 0.5rem;
   margin-bottom: 1.5rem;
   font-size: 1.3em;
-}
-
-/* Mermaid Diagram Styling */
-.mermaid {
-  font-size: 0.95em;
-  margin: 1.25rem 0;
-}
-
-.mermaid .label {
-  font-size: 11px !important;
-  line-height: 1.2 !important;
-  padding: 3px 5px !important;
-}
-
-.mermaid .node rect,
-.mermaid .node circle,
-.mermaid .node polygon {
-  rx: 4px !important;
-  ry: 4px !important;
-}
-
-/* CFP Specific Styling */
-.mermaid-cfp {
-  background: #f8fbff;
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin: 1.5rem 0;
-  border-left: 4px solid #1976d2;
-  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.1);
-}
-
-.mermaid .cluster-label {
-  color: #333;
-}
-
-/* Responsive adjustments */
-@media (max-width: 996px) {
-  .mermaid,
-  .theme-mermaid {
-    font-size: 0.8em;
-  }
-
-  .mermaid .label {
-    font-size: 0.75em !important;
-    padding: 2px 3px;
-  }
-}
-
-/* For diagrams that need horizontal scrolling */
-.mermaid--scrollable {
-  display: block;
-  overflow-x: auto;
-  max-width: 100%;
-}
-
-.mermaid--scrollable svg {
-  min-width: 100%;
-  max-width: none;
-}
-
-/* Special case for wide diagrams */
-.mermaid--wide {
-  width: 200%;
-  max-width: 200%;
-  margin-left: -50%;
-}
-
-@media (max-width: 996px) {
-  .mermaid--wide {
-    width: 150%;
-    margin-left: -25%;
-  }
-}
-
-@media (max-width: 768px) {
-  .mermaid--wide {
-    width: 100%;
-    margin-left: 0;
-  }
 }

@@ -78,51 +78,25 @@ Here's a visual overview of the scheduling workflow that will be explained in de
 <details>
   <summary>📊 View Workflow Diagram for Scheduling a Lunch & Learn</summary>
   <div style={{marginTop: '1rem'}}>
+
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontSize':'16px', 'fontFamily':'Arial'}}}%%
 flowchart LR
-  %% Left Column - Request Review
   subgraph A["📬 Request Review"]
     direction TB
-    A1["📅 Speaker submits request form"]
-    A2["📋 LC and DW review topic"]
-    A3["✅ Topic approved"]
-    A1 --> A2 --> A3
+    A1["📅 Speaker submits request form"] --> A2["📋 LC and DW review topic"] --> A3["✅ Topic approved"]
   end
 
-%% Right Column - Scheduling Stage
-subgraph B["Scheduling 📅"]
-direction TB
-B1["LC checks calendar for dates 🗓"]
-B2["Confirm Host/Moderator 🗣️"]
-B3{"Time slots available?"}
-B4["Finalize date with Speaker"]
-B5["Add to Google Calendar"]
-B6["Send invites to team"]
-B7["Request more dates if needed"]
+  subgraph B["📅 Scheduling"]
+    direction TB
+    B1["🗓 LC checks calendar for dates"] --> B2["🗣️ Confirm Host/Moderator"] --> B3{"Time slots available?"}
+    B3 -- Yes --> B4["Finalize date with Speaker"] --> B5["Add to Google Calendar"] --> B6["Send invites to team"]
+    B3 -- No --> B7["Request more dates if needed"] --> B1
+  end
 
-    B1 --> B2 --> B3
-    B3 -->|Yes| B4
-    B3 -->|No| B7
-    B4 --> B5 --> B6
-
-end
-
-%% Connect the two subgraphs
-A3 --> B1
-
-%% Flow within Scheduling
-B1 --> B2 --> B3
-B3 -->|Yes| B4 --> B5 --> B6
-B3 -->|No| B7 --> B1
-
-%% Styling
-classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:2px,color:#333,padding:10px;
-classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:2px,color:#333;
-class A,B process;
-
+  A3 --> B1
 ```
-</div>
+
+  </div>
 </details>
 
 ## Detailed Scheduling Process
@@ -222,4 +196,3 @@ _**NOTE:** The Moderator and the Host can be the same person._
   - The VC events page
   - X
   - The newsletter team (if the relevant issue has not yet been published)
-```

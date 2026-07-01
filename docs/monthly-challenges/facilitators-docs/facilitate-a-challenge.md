@@ -46,66 +46,35 @@ Below are diagrams of the Monthly Challenge workflow. Click to expand each secti
 #### Planning + Promoting
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontSize':'24px', 'fontFamily':'arial'}}}%%
 flowchart LR
-  %% Left Column - Planning
   subgraph A["🛠 Planning"]
     direction TB
-    A1["📢 Team leads receive ideas from members"]
-    A2["👥 Team leads pick an idea"]
-    A3["☕ Team leads and Coffee Table Group hosts discuss challenge details"]
-    A1 --> A2 --> A3
+    A1["📢 Team leads receive ideas from members"] --> A2["👥 Team leads pick an idea"] --> A3["☕ Team leads and Coffee Table Group hosts discuss challenge details"]
   end
 
-  %% Right Column - Promoting
   subgraph B["📬 Promoting"]
     direction TB
-    B1["💬 Update #monthly-challenge channel topic a week before launch"]
-    B2["📣 Publish post about the challenge on VC's blog"]
-    B3["🧾 Post challenge announcement in #monthly-challenge Slack channel"]
-    B4["👩‍💻 Crosspost announcement to other community channels"]
-    B1 --> B2 --> B3 --> B4
+    B1["💬 Update #monthly-challenge channel topic a week before launch"] --> B2["📣 Publish post about the challenge on VC's blog"] --> B3["🧾 Post challenge announcement in #monthly-challenge Slack channel"] --> B4["👩‍💻 Crosspost announcement to other community channels"]
   end
 
-  %% Flow between columns
   A3 --> B1
-
-  %% Styling
-  classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:3px,color:#1a1a1a,padding:15px;
-  classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:3px,color:#1a1a1a;
-  class A,B process;
 ```
 
 #### Check-Ins + Post-Challenge
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontSize':'23px', 'fontFamily':'arial'}}}%%
 flowchart LR
-  %% Left Column - Check-Ins
   subgraph A["🧭 Check-ins"]
     direction TB
-    A1["🗂 Participants set personal goals Mondays at 10 AM"]
-    A2["✅ Post thread for async progress updates"]
-    A3["🤖 Automate check-ins for certain challenges"]
-    A1 --> A2 --> A3
+    A1["🗂 Participants set personal goals Mondays at 10 AM"] --> A2["✅ Post thread for async progress updates"] --> A3["🤖 Automate check-ins for certain challenges"]
   end
 
-  %% Right Column - Post-Challenge
   subgraph B["🌟 Post-Challenge"]
     direction TB
-    B1["🗒️ Collect feedback and takeaways from participants"]
-    B2["📰 Publish challenge recap in newsletter or blog"]
-    B3["🔄 Plan improvements for future challenges"]
-    B1 --> B2 --> B3
+    B1["🗒️ Collect feedback and takeaways from participants"] --> B2["📰 Publish challenge recap in newsletter or blog"] --> B3["🔄 Plan improvements for future challenges"]
   end
 
-  %% Flow between stages
   A3 --> B1
-
-  %% Styling
-  classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:3px,color:#1a1a1a,padding:15px;
-  classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:3px,color:#1a1a1a;
-  class A,B process;
 ```
 
   </div>

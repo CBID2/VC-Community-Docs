@@ -46,34 +46,18 @@ Below is the workflow for the Lightning Talks Event.
   <div style={{marginTop: '1rem'}}>
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontSize':'24px', 'fontFamily':'arial'}}}%%
 flowchart LR
-  %% Left Column - Team Forming
   subgraph A["👥 Team Forming"]
     direction TB
-    A1["📢 Call for Team Members"]
-    A2["👥 Onboard New Team"]
-    A3["📝 Assign Coordinators"]
-    A4["📋 Review Responsibilities"]
-    A1 --> A2 --> A3 --> A4
+    A1["📢 Call for Team Members"] --> A2["👥 Onboard New Team"] --> A3["📝 Assign Coordinators"] --> A4["📋 Review Responsibilities"]
   end
 
-  %% Right Column - Initial Planning
   subgraph B["📋 Initial Planning"]
     direction TB
-    B1["📅 Set Timeline"]
-    B2["🎯 Define Goals"]
-    B3["📝 Create Checklist"]
-    B1 --> B2 --> B3
+    B1["📅 Set Timeline"] --> B2["🎯 Define Goals"] --> B3["📝 Create Checklist"]
   end
 
-  %% Flow between columns
   A4 --> B1
-
-  %% Styling
-  classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:3px,color:#1a1a1a,padding:15px;
-  classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:3px,color:#1a1a1a;
-  class A,B process;
 ```
 
   </div>
@@ -92,39 +76,19 @@ flowchart LR
   <div style={{marginTop: '1rem'}}>
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontSize':'26px', 'fontFamily':'arial'}}}%%
 flowchart LR
-  %% Left Column - Proposal Collection
   subgraph A["📬 Proposal Collection"]
     direction TB
-    A1["📣 CFP Opens"]
-    A2["🧾 Collect Proposals"]
-    A3{"Enough Proposals?"}
-    A4["📢 Extend CFP Period"]
-    A1 --> A2 --> A3
-    A3 -- No --> A4 --> A2
+    A1["📣 CFP Opens"] --> A2["🧾 Collect Proposals"] --> A3{"Enough Proposals?"}
+    A3 -- No --> A4["📢 Extend CFP Period"] --> A2
   end
 
-  %% Right Column - Scheduling
   subgraph B["📅 Scheduling"]
     direction TB
-    B1["👩‍💻 Group by Topic"]
-    B2["📅 Schedule Talks"]
-    B3["📝 Send Confirmations"]
-    B4["📅 Add to Calendar"]
-    B5["📢 Share Schedule"]
-    B1 --> B2 --> B3 --> B4 --> B5
+    B1["👩‍💻 Group by Topic"] --> B2["📅 Schedule Talks"] --> B3["📝 Send Confirmations"] --> B4["📅 Add to Calendar"] --> B5["📢 Share Schedule"]
   end
 
-  %% Flow between columns
   A3 -- Yes --> B1
-
-  %% Styling
-  classDef default fill:#f0f7ff,stroke:#1976d2,stroke-width:3px,color:#0d47a1,padding:15px;
-  classDef process fill:#e3f2fd,stroke:#1976d2,stroke-width:3px,color:#0d47a1;
-  classDef decision fill:#fff8e1,stroke:#ff8f00,stroke-width:3px,color:#e65100;
-  class A,B process;
-  class A3 decision;
 ```
 
   </div>
@@ -144,37 +108,19 @@ flowchart LR
   <div style={{marginTop: '1rem'}}>
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontSize':'24px', 'fontFamily':'arial'}}}%%
 flowchart LR
-  %% Left Column - Talk Preparation
   subgraph A["🗂 Talk Preparation"]
     direction TB
-    A1["🗂 Organize Talks"]
-    A2["✅ Send Checklists"]
-    A3{"Info Missing?"}
-    A4["📬 Request Info"]
-    A1 --> A2 --> A3
-    A3 -- Yes --> A4 --> A2
+    A1["🗂 Organize Talks"] --> A2["✅ Send Checklists"] --> A3{"Info Missing?"}
+    A3 -- Yes --> A4["📬 Request Info"] --> A2
   end
 
-  %% Right Column - Speaker Prep
   subgraph B["👤 Speaker Prep"]
     direction TB
-    B1["📸 Collect Speaker Info"]
-    B2["📁 Create Shared Folder"]
-    B3["✅ Verify Materials"]
-    B1 --> B2 --> B3
+    B1["📸 Collect Speaker Info"] --> B2["📁 Create Shared Folder"] --> B3["✅ Verify Materials"]
   end
 
-  %% Flow between columns
   A3 -- No --> B1
-
-  %% Styling
-  classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:3px,color:#1a1a1a,padding:15px;
-  classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:3px,color:#1a1a1a;
-  classDef decision fill:#fff8e1,stroke:#ff8f00,stroke-width:3px,color:#e65100;
-  class A,B process;
-  class A3 decision;
 ```
 
   </div>
@@ -194,34 +140,18 @@ flowchart LR
   <div style={{marginTop: '1rem'}}>
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontSize':'26px', 'fontFamily':'arial'}}}%%
 flowchart LR
-  %% Left Column - Pre-Event
   subgraph A["📋 Pre-Event"]
     direction TB
-    A1["🧾 Final Prep & Tech Check"]
-    A2["📨 Send Directions to Speakers"]
-    A3["🔗 Share Event Link"]
-    A4["⏰ Set Reminders"]
-    A1 --> A2 --> A3 --> A4
+    A1["🧾 Final Prep & Tech Check"] --> A2["📨 Send Directions to Speakers"] --> A3["🔗 Share Event Link"] --> A4["⏰ Set Reminders"]
   end
 
-  %% Right Column - Event
   subgraph B["🎤 Event"]
     direction TB
-    B1["🎬 Start Recording"]
-    B2["🧑‍🏫 Talks Begin"]
-    B3["❓ Q&A Session"]
-    B1 --> B2 --> B3
+    B1["🎬 Start Recording"] --> B2["🧑‍🏫 Talks Begin"] --> B3["❓ Q&A Session"]
   end
 
-  %% Flow between columns
   A4 --> B1
-
-  %% Styling
-  classDef default fill:#f5f5f5,stroke:#2e8555,stroke-width:3px,color:#1a1a1a,padding:15px;
-  classDef process fill:#e6f3ed,stroke:#2e8555,stroke-width:3px,color:#1a1a1a;
-  class A,B process;
 ```
 
   </div>
